@@ -4,7 +4,7 @@ export function showDetails(card, animal) {
     <h2>${animal.name}</h2>
     <p><strong>Especie:</strong> ${animal.species}</p>
         <p><strong>Raza:</strong> ${animal.breeds.primary}</p>
-        <img src="${animal.photos[0] ? animal.photos[0].medium : "https://via.placeholder.com/300"}" 
+        <img src="${animal.photos[0] ? animal.photos[0].medium : "https://via.placeholder.com/300x300"}" 
              alt="${animal.name}">
 
         <h3>Refugio</h3>
