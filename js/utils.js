@@ -4,7 +4,7 @@ import { showDetails } from "./details.js";
 const apiKey = "YesIkkSGHinfNBaIwwMmyRad9G7hYca4QYo0L194qlBAI7V56W";
 const apiSecret = "muZVDdT4z31Y4XxwDdRQiS24k8qDAZJnkn4YilM2";
 
-export async function getAccesToken() {
+export async function getAccessToken() {
     const url = "https://api.petfinder.com/v2/oauth2/token";
     const res = await fetch(url, {
         method: "POST",

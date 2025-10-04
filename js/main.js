@@ -1,4 +1,4 @@
-import { getAccesToken, displayPets } from "./utils.js";
+import { getAccessToken, displayPets } from "./utils.js";
 import { showDetails } from "./details.js";
 
 // async function loadPets() {
@@ -15,11 +15,9 @@ import { showDetails } from "./details.js";
 //     displayPets();
     
 // }
-
-
 async function loadPets() {
     try {
-        const token = await getAccesToken();
+        const token = await getAccessToken();
 
         const res = await fetch("https://api.petfinder.com/v2/animals", {
             headers: {
