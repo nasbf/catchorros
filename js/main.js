@@ -1,4 +1,5 @@
 import { getAccesToken, displayPets } from "./utils.js";
+import { showDetails } from "./details.js";
 
 // async function loadPets() {
 //     const token = await getAccesToken();
