@@ -2,10 +2,10 @@ import { loadFooter, loadHeader, displayPets, getAccessToken } from "./utils.js"
 
 
 document.addEventListener("DOMContentLoaded", () => {
-    loadFooter();
+  loadFooter();
 });
 document.addEventListener("DOMContentLoaded", () => {
-    loadHeader();
+  loadHeader();
 });
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -18,15 +18,13 @@ document.addEventListener("DOMContentLoaded", () => {
     const animalInfo = document.getElementById("resume");
     if (animalInfo) {
       animalInfo.innerHTML = `
-        <h2>You're adopting: ${animal.name}</h2>
-        <input class = "submit" type="submit" value="Adopt My Pet">
-      `;
+      <input class = "submit" type="submit" value="Adopting ${animal.name} ❤">`;
     }
     const animalImg = document.getElementById("petChoiced");
     const imageUrl = animal.photos && animal.photos.length > 0 ? animal.photos[0].small : " ";
     if (animalImg) {
       animalImg.innerHTML = `
-        <h2>You're adopting: ${animal.name}</h2>
+        <h2>Bring ${animal.name} Home</h2>
         <img src="${imageUrl}"
              alt="${animal.name}">
         
