@@ -1,4 +1,4 @@
-import { getAccessToken, displayPets } from "./utils.js";
+import { getAccessToken, displayPets, loadFooter, loadHeader} from "./utils.js";
 import { showDetails } from "./details.js";
 
 // async function loadPets() {
@@ -33,3 +33,9 @@ async function loadPets() {
 }
 
 document.addEventListener("DOMContentLoaded", loadPets);
+document.addEventListener("DOMContentLoaded", () => {
+    loadFooter();
+});
+document.addEventListener("DOMContentLoaded", () => {
+    loadHeader();
+});

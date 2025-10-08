@@ -1,24 +1,37 @@
 export function showDetails(card, animal) {
     //const details = document.getElementById("petDetails");
+    const imageUrl = animal.photos && animal.photos.length > 0 ? animal.photos[0].small : " ";
+
     card.innerHTML = `
     <h2>${animal.name}</h2>
-    <p><strong>Especie:</strong> ${animal.species}</p>
-        <p><strong>Raza:</strong> ${animal.breeds.primary}</p>
-        <img src="${animal.photos[0] ? animal.photos[0].medium : "https://via.placeholder.com/300x300"}" 
+    <p><strong>Specie:</strong> ${animal.species}</p>
+        <p><strong>Breed:</strong> ${animal.breeds.primary}</p>
+        <p><strong>Age:</strong> ${animal.age}</p>
+        <p><strong>Gender:</strong> ${animal.gender}</p>
+        <p><strong>Tags:</strong></p> ${animal.tags.slice(0, 2).join(", ")}
+        <hr>
+        <img src="${imageUrl}"
              alt="${animal.name}">
-
-        <h3>Refugio</h3>
+        
+        <button class="button">Adopt</button>
+        
+        <h3>Shelter</h3>
         <p>${animal.contact.address.city}, ${animal.contact.address.state}</p>
 
         <iframe
-        width="400"
+        width="100%"
         height="300"
-        style="border:0"
-        loading="lazy"
+        border: solid, 2px;
+        style="border:10"
+        
         allowfullscreen
         referrerpolicy="no-referrer-when-downgrade"
         src="https://www.google.com/maps/embed/v1/place?key=AIzaSyASQYdlOVmx1U6q9eZdsOjTeRblppIMrgE&q=${animal.contact.address.city},${animal.contact.address.state}">
         </iframe>
     `;
+    const adoptButton = card.querySelector(".button");
+    adoptButton.addEventListener("click", () => {
+        window.location.href = "form.html";
+    });
 }
 

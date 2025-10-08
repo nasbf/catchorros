@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
+
+:root {
+    --color-principal: #BD337C;
+    --color-secondary: #2F2B54;
+    --principal-font: "Alan-Sans";
+    --secondary-font: "EB Garamond";
+
+
+}
+
+.header {
+    display: flex;
+    width: 100%;
+
+
+    & img {
+        width: 130px;
+        height: 150px;
+        padding: 30px;
+    }
+
+    & nav {
+
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        align-content: space-between;
+
+        & a {
+            margin-right: 90px;
+            text-decoration: none;
+            font-size: 1.3rem;
+            font-family: var(--principal-font);
+            color: var(--color-secondary);
+            font-weight: 500px;
+
+            &:hover {
+                background-color: #2F2B54;
+                padding: 13px;
+                color: whitesmoke;
+                border-radius: 6px;
+            }
+
+        }
+    }
+
+}
+
+.optionsPets {
+    background-color: var(--color-principal);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 20px;
+    gap: 20px;
+    border-radius: 5px;
+
+}
+
+.pet-card {
+    background-color: var(--color-secondary);
+    color: white;
+    padding: 18px;
+    box-shadow: 2px 2px 6px white;
+
+    & img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+        border-radius: 5px;
+
+    }
+}
+
+.footerDiv {
+    background-color: var(--color-secondary);
+    font-family: var(--principal-font);
+    color: white;
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+
+}
+
+.formAdopt {
+    background-color: #2F2B54;
+    box-shadow: 3px 8px 5px #ffbce0;
+    width: 100%;
+    font-family: var(--secondary-font);
+    color: wheat;
+    font-size: 1.5rem;
+    padding: 15px;
+
+
+    & fieldset {
+        width: 28%;
+        margin-left: 700px;
+        margin-bottom: 8px;
+        border: solid 6px, #BD337C;
+        box-shadow: 0.1px 0.2px 5px wheat;
+        display: flex;
+        flex-direction: column;
+
+        & label {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 10px;
+            font-size: 1.7rem;
+        }
+
+        & #inputCamp {
+
+            height: 35px;
+            margin-bottom: 15px;
+            color: #2F2B54;
+            font-family: var(--principal-font);
+            font-size: 1.2rem;
+        }
+    }
+
+
+}
+
+.submit {
+    background-color: wheat;
+    width: 100%;
+    height: 50px;
+    font-size: 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+
+
+
+
+}
+.button{
+    background-color: wheat;
+    width: 40%;
+    height: 40px;
+    display: block;
+    margin: 10px auto;
+    font-size: 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+
+/* css small screen media query*/
+
+@media (max-width: 768px) {
+
+    nav {
+
+        padding: 20px;
+        flex-direction: column;
+        margin-left: 80px;
+    }
+
+    nav a {
+        margin-bottom: 15px;
+        padding: 3px;
+
+    }
+
+    .optionsPets {
+        display: flex;
+        flex-direction: column;
+    }
+}

@@ -15,21 +15,22 @@ export async function getAccessToken() {
     const data = await res.json();
     return data.access_token; // devolvemos el token
 }
-     
-    export function displayPets (data){
-        const container = document.getElementById("optionsPets");
-        container.innerHTML = "";
 
-        data.animals.forEach(animal => {
-            const petCard = document.createElement("div");
-            petCard.classList.add("pet-card");
+export function displayPets(data) {
+    const container = document.getElementById("optionsPets");
+    container.innerHTML = "";
 
-            petCard.innerHTML = `
+    data.animals.forEach(animal => {
+        const petCard = document.createElement("div");
+        petCard.classList.add("pet-card");
+        const imageUrl = animal.photos && animal.photos.length > 0 ? animal.photos[0].small : " ";
+
+        petCard.innerHTML = `
             <h3>${animal.name}</h3>
             <p>${animal.breeds.primary}</p>
             <p>${animal.type}</p>
-    
-            `;
+            ${imageUrl ? `<img src="${imageUrl}" alt="${animal.name}">` : ""}`
+
 
         petCard.addEventListener("click", () => {
             showDetails(petCard, animal);
@@ -37,11 +38,36 @@ export async function getAccessToken() {
 
         container.appendChild(petCard);
     });
-
-  
-
-    
 }
+
+export async function loadTemplate(path) {
+    const res = await fetch(path);
+    const template = await res.text();
+    return template;
+}
+export async function loadFooter () {
+    const footerTemplate = await loadTemplate("./partials/footer.html");
+    const footerElement = document.querySelector(".footer");
+
+    if (footerElement) {
+        footerElement.innerHTML = footerTemplate;
+    }
+        
+}
+export async function loadHeader () {
+    const headerTemplate = await loadTemplate("./partials/header.html");
+    const headerElement = document.querySelector(".header");
+
+    if (headerElement) {
+        headerElement.innerHTML = headerTemplate;
+    }
+        
+}
+
+
+
+
+
 
 
 
