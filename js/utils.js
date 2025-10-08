@@ -34,6 +34,7 @@ export function displayPets(data) {
 
         petCard.addEventListener("click", () => {
             showDetails(petCard, animal);
+            
         });
 
         container.appendChild(petCard);

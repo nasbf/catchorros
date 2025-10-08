@@ -31,7 +31,11 @@ export function showDetails(card, animal) {
     `;
     const adoptButton = card.querySelector(".button");
     adoptButton.addEventListener("click", () => {
+        localStorage.setItem("selectedPet", JSON.stringify(animal));
+        
         window.location.href = "form.html";
     });
+
+
 }
 

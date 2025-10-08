@@ -10,6 +10,12 @@
 
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 .header {
     display: flex;
     width: 100%;
@@ -84,58 +90,7 @@
 
 }
 
-.formAdopt {
-    background-color: #2F2B54;
-    box-shadow: 3px 8px 5px #ffbce0;
-    width: 100%;
-    font-family: var(--secondary-font);
-    color: wheat;
-    font-size: 1.5rem;
-    padding: 15px;
-
-
-    & fieldset {
-        width: 28%;
-        margin-left: 700px;
-        margin-bottom: 8px;
-        border: solid 6px, #BD337C;
-        box-shadow: 0.1px 0.2px 5px wheat;
-        display: flex;
-        flex-direction: column;
-
-        & label {
-            display: flex;
-            flex-direction: column;
-            margin-bottom: 10px;
-            font-size: 1.7rem;
-        }
-
-        & #inputCamp {
-
-            height: 35px;
-            margin-bottom: 15px;
-            color: #2F2B54;
-            font-family: var(--principal-font);
-            font-size: 1.2rem;
-        }
-    }
-
-
-}
-
-.submit {
-    background-color: wheat;
-    width: 100%;
-    height: 50px;
-    font-size: 1.5rem;
-    border-radius: 5px;
-    cursor: pointer;
-
-
-
-
-}
-.button{
+.button {
     background-color: wheat;
     width: 40%;
     height: 40px;
@@ -145,6 +100,94 @@
     border-radius: 5px;
     cursor: pointer;
     transition: 0.3s;
+}
+
+/* css form.html - button form*/
+
+.submit {
+    background-color: wheat;
+    width: 100%;
+    height: 50px;
+    font-size: 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.gridForm {
+
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr, 1fr;
+    margin-bottom: 10px;
+
+    & .petChoiced {
+        grid-column: 1/2;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        
+
+        color: var(--color-principal);
+
+        & img {
+            padding: 15px;
+            max-width: 300px;
+            height: auto;
+            object-fit: cover;
+            border-radius: 5px;
+            box-shadow: 2px 2px 6px grey;
+            margin: 25px 0px;
+        }
+
+        & p {
+            color: var(--color-secondary);
+            margin-bottom: 8px;
+        }
+    }
+
+    & .formAdopt {
+        grid-column: 2/3;
+        background-color: #2F2B54;
+        box-shadow: 3px 8px 5px #ffbce0;
+        width: 100%;
+        font-family: var(--secondary-font);
+        color: wheat;
+        font-size: 1.5rem;
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+
+        & fieldset {
+            width: 65%;
+            padding: 30px;
+            margin: 0 auto;
+            border: solid 6px, #BD337C;
+            box-shadow: 0.1px 0.2px 5px wheat;
+            display: flex;
+            flex-direction: column;
+
+            & label {
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 10px;
+                font-size: 1.7rem;
+
+                & #inputCamp {
+                    width: 100%;
+
+                    height: 35px;
+                    margin-bottom: 15px;
+                    color: #2F2B54;
+                    font-family: var(--principal-font);
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
+
+
 }
 
 
