@@ -27,23 +27,23 @@
     <main>
         <div class="gridForm">
             <div id="petChoiced" class="petChoiced"></div>
-            <form method="get" action="record.html" id="formAdopt" class="formAdopt">
-            <fieldset>
-            
-                <p class="title">ADOPTION REQUEST</p>
-                <label class="formLabel">Name * <input type="text" id="inputCamp" name="name" required></label>
-                <label class="formLabel">Email * <input type="text" id="inputCamp" name="email" required></label>
-                <label class="formLabel">Phone Number * <input type="text" id="inputCamp" name="phone"
-                    pattern="[0-9]{10,}" placeholder="355 555 56 55"></label>
-                <label class="formLabel">Address * <input type="text" inputmode="numeric" id="inputCamp" name="phone"
-                    pattern="[A-Za-z0-9]{8,}" required></label>
+            <form method="get" action="checkform.html" id="formAdopt" class="formAdopt">
+                <fieldset>
 
-            </fieldset>
-            <fieldset id="resume" class="resume">
-                
-                <input class = "submit" type="submit" value="Adopt My Pet">
-            </fieldset>
-            
+                    <p class="title">ADOPTION REQUEST</p>
+                    <label class="formLabel">Name * <input type="text" id="inputCamp" name="name" required></label>
+                    <label class="formLabel">Email * <input type="text" id="inputCamp" name="email" required></label>
+                    <label class="formLabel">Phone Number * <input type="text" id="inputCamp" name="phone"
+                            pattern="[0-9]{10,}" placeholder="355 555 56 55"></label>
+                    <label class="formLabel">Address * <input type="text" inputmode="numeric" id="inputCamp"
+                            name="phone" pattern="[A-Za-z0-9\s#\-,\.]{5,100}" required></label>
+
+                </fieldset>
+                <fieldset id="resume" class="resume">
+
+                    <input class="submit" type="submit" value="Adopt My Pet">
+                </fieldset>
+
             </form>
         </div>
     </main>

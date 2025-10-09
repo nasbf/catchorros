@@ -37,3 +37,28 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 });
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("resume");
+
+  form.addEventListener("submit", (event) => {
+    event.preventDefault(); 
+
+    
+    const name = document.getElementById("inputCampName").value.trim();
+    const email = document.getElementById("inputCampEmail").value.trim();
+    const phone = document.getElementById("inputCampPhone").value.trim();
+    const address = document.getElementById("inputCampAddress").value.trim();
+
+    
+    if (!name || !email || !phone || !address) {
+      alert("⚠️ Please complete all required fields before submitting.");
+      return;
+    }
+
+    
+    alert(`✅ Thank you, ${name}! Your adoption request has been sent.`);
+
+    
+    form.reset();
+  });
+});
