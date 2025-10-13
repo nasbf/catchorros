@@ -75,6 +75,11 @@
     padding: 20px;
     gap: 20px;
     border-radius: 5px;
+    transition: transform 1s ease;
+    & img:hover{
+        transform: scale(1.2);
+        border: 8px solid var(--color-secondary);
+    }
 
 }
 
