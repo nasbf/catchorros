@@ -274,6 +274,10 @@
     border-radius: 8px;
     transition: 0.3s ease;
     animation: bounce 0.5s infinite;
+    &.message:hover{
+        background-color: var(--color-principal);
+        color:white;
+    }
 
     @media (max-width: 768px) {
         width: 80%;
