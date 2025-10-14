@@ -38,6 +38,18 @@
     }
 }
 
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateX(1px);
+    }
+
+    50% {
+        transform: translateY(2px);
+    }
+}
+
 
 .header {
     display: flex;
@@ -255,11 +267,17 @@
 .message {
     background-color: #dcd8ff;
     color: var(--color-principal);
-    width: 50%;
+    width: 80%;
     text-align: center;
     margin: 120px auto;
     padding: 50px;
     border-radius: 8px;
+    transition: 0.3s ease;
+    animation: bounce 0.5s infinite;
+
+    @media (max-width: 768px) {
+        width: 80%;
+    }
 }
 
 /* css small screen media query*/
